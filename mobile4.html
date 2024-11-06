@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Background Image</title>
+    <!-- Include Font Awesome for the up arrow icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full height and width to cover the whole viewport */
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body and background settings */
+        body {
+            background-image: url('bgdesk.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Logo styling */
+        .logo-container {
+            margin-top: 15px; /* 10-20px margin from the top */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            width: 100%; /* Full width to center the logo */
+        }
+
+        .logo-container img {
+            width: 100px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Example content (main heading) */
+        .content {
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 90%;
+            margin-top: auto; /* Pushes content to center/bottom */
+        }
+
+        h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Textbox with bottom border */
+        .text-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 2px solid white;
+            background: transparent;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .text-input::placeholder {
+            color: #ddd; /* Placeholder text color */
+        }
+
+        /* Bottom content with Instagram link on the left and up arrow on the right */
+        .bottom-content {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 1.2em;
+        }
+
+        .bottom-content a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Style for the up arrow inside a circle */
+        .bottom-content .up-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .bottom-content .up-arrow:hover {
+            background-color: #ff66b2; /* Change background on hover */
+        }
+
+        .bottom-content .up-arrow i {
+            font-size: 1.5em;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            h3 {
+                font-size: 1em;
+            }
+
+            .text-input {
+                font-size: 1em;
+            }
+
+            .bottom-content {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+
+            .bottom-content .up-arrow {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Container at the top -->
+    <div class="logo-container">
+        <img src="logo.svg" alt="Logo">
+    </div>
+
+    <div class="content">
+       <h3>Signup for product drop dates</h3>
+       <input type="text" class="text-input" placeholder="Enter your email">
+    </div>
+
+    <!-- Bottom Content with Instagram Text on the Left and Up Arrow on the Right -->
+    <div class="bottom-content">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="#top" class="up-arrow"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+</body>
+</html>

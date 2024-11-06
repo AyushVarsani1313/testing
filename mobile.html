@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Background Image</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full height and width to cover the whole viewport */
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body and background settings */
+        body {
+            background-image: url('bgdesk.jpg'); /* Replace with your image URL */
+            background-size: cover;               /* Ensure the image covers the entire screen */
+            background-position: center center;    /* Keep the image centered */
+            background-attachment: fixed;          /* Make the background stay fixed while scrolling */
+            background-repeat: no-repeat;         /* Prevent the image from repeating */
+            color: white;                          /* Text color */
+            display: flex;
+            justify-content: center;               /* Center content horizontally */
+            align-items: center;                   /* Center content vertically */
+            height: 100vh;                         /* Full viewport height */
+        }
+
+        /* Example content (e.g., heading or text) */
+        .content {
+            text-align:center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background for readability */
+            border-radius: 10px;
+            max-width: 90%; /* Ensure content doesn't go off the screen */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple page with a full-screen background image that adjusts to mobile devices.</p>
+    </div>
+
+</body>
+</html>
